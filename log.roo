@@ -1,0 +1,10 @@
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log opened at 2012-08-16 16:53:22
+project --topLevelPackage com.ruyicai.win8 --projectName win8appsupport --java 6
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log closed at 2012-08-16 16:53:33
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log opened at 2012-08-16 16:53:41
+hint
+persistence setup --database MYSQL --provider HIBERNATE 
+web mvc setup
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log closed at 2012-08-16 17:29:44
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log opened at 2012-08-17 15:37:14
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log closed at 2012-08-17 18:14:54

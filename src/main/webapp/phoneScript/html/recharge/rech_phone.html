@@ -1,0 +1,173 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<link type="text/css" rel="stylesheet" href="../../style/public.css" />
+<script type="text/javascript">
+	function closeDialog(){
+		util.dom("dialog").style.display = "none";	
+	}
+</script>
+</head>
+<body>
+	<div class="container">
+    	<div class="hearder"></div>
+        <div class="body">
+        	<div class="bodyLeft">
+            	<ul>
+                	<li class="">
+                    	<a href="../../index.html">
+                            <img src="../../images/icon/homepage.png" />
+                            <p>购彩大厅</p>
+                        </a>
+                    </li>
+                    <li class="">
+                    	<a href="../togethoer.html">
+                            <img src="../../images/icon/groupBuy.png" />
+                            <p>合买大厅</p>
+                        </a>
+                    </li>
+                    <li class="">
+                    	<a href="../lottery/lottery.html">
+                            <img src="../../images/icon/notice.png" />
+                            <p>开奖公告</p>
+                        </a>
+                    </li>
+                    <li class="curPage">
+                    	<a href="../recharge/index.html">
+                            <img src="../../images/icon/payIcon.png" />
+                            <p>充值中心</p>
+                        </a>
+                    </li>
+                    <li class="">
+                    	<a href="../userCenter/index.html">
+                            <img src="../../images/icon/userCenter.png" />
+                            <p>用户中心</p>
+                        </a>
+                    </li>
+                    <li class="">
+                    	<a href="../more/index.html">
+                            <img src="../../images/icon/more.png" />
+                            <p>更多</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        	<div class="bodyRight">
+            	<div class="homeTitle">
+                    <div class="logBox">
+                    	<a id="logBtn" class="logBtn" href="javascript:;">登陆</a>
+                    </div>
+                    <div class="title">
+                    	提现
+                    </div>
+                </div>
+                <div class="homeCont">
+                	<div class="appBox uc" style="position:relative;">
+                    	
+                        <div class="zx_top">
+                        	<a href="index.html"><img src="../../images/icon/backBtn.png" /></a>
+                            <ul class="cz_title cz_dna">
+                            	<li>
+                                	<img src="../../images/icon/ylcz.png" />
+                                	<div class="title">
+                                    <h2>银联语音充值</h2>
+                                    <p>使用银联DNA支付，支持各大银行，免手续费</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="recharge">
+                        	<div class="rechargeRigh">
+                            	<div class="title">手机充值注意事项：</div>
+                            	<p>1、请务必使用与此面额相同的手机充值卡，否则会导致支付不成功，或金额丢失。（如使用面额100元移动充值卡单选择50元面额，
+                                高于50元部分不返还）</p>
+                                <p>2、不支持彩铃充值卡和短信充值卡，选择任何面额彩铃充值卡，将不予退还任何金额。</p>
+                                <p>
+                                	3、使用手机充值卡，充值金额只能用于在本站购买彩票，不能体现，中奖奖金可提现。
+                                </p>
+                                <p>
+                                	4、使用手机充值卡充值，由于运营商或充值服务商收取4%的充值手续费，将从充值金额中扣除。
+                                </p>
+                            </div>
+                        	<div class="rechargeLeft">
+                            	<ul id="recharge" class="cz_dna">
+                                	<li>
+                                    	<div class="recLeft">
+                                        	选择运营商：
+                                        </div>
+                                        <div class="recRight bor">
+                                        	<select id="cardtype">
+                                            	<option>移动充值卡</option>
+                                                <option>联通充值卡</option>
+                                                <option>电信充值卡</option>
+                                            </select>
+                                        </div>
+                                    </li>
+                                    <li>
+                                    	<div class="recLeft">
+                                        	充值卡面额：
+                                        </div>
+                                        <div class="recRight bor">
+                                        	<select id="amount">
+                                                <option>10</option>
+                                                <option>20</option>
+                                                <option>30</option>
+                                                <option>50</option>
+                                                <option>100</option>
+                                                <option>200</option>
+                                                <option>300</option>
+                                                <option>500</option>
+                                            </select>
+                                        </div>
+                                    </li>
+                                    <li>
+                                    	<div class="recLeft">
+                                        	充值卡序列号：
+                                        </div>
+                                        <div class="recRight bor">
+                                        	<input id="cardno" type="text" />
+                                        </div>
+                                    </li>
+                                    <li>
+                                    	<div class="recLeft">
+                                        	充值卡密码：
+                                        </div>
+                                        <div class="recRight bor">
+                                        	<input id="cardpwd" type="text" />
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="toPay cz_submi">
+                                    <div id="submit" class="subBtm"><a href="javascript:">确定</a></div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+        </div> <div class="clear"></div>
+        <div class="footer"></div>
+        <div class="clear"></div>
+    </div>
+
+<!--隐藏部分-->
+<div class="dialog" id="dialog">
+	<div id="overlayId" class="overlayId"></div>
+    <div class="dialogBox" id="dialogBox">
+    	
+    </div>
+</div>
+
+	<script type = "text/javascript" src="../../script/getData.js"></script>
+	<script type = "text/javascript" src="../../script/util/util.js"></script>
+	<script type = "text/javascript" src="../../script/root.js"></script>
+    <script type = "text/javascript" src="../../script/services/login.js"></script>
+    <script type = "text/javascript" src="../../script/manger/rech_phone.js"></script>
+</body>
+</html>

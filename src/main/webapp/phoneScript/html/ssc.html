@@ -1,0 +1,211 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<link type="text/css" rel="stylesheet" href="../style/public.css" />
+<script type="text/javascript">
+	function closeDialog(){
+		util.dom("dialog").style.display = "none";
+	}
+</script>
+</head>
+<body>
+	<div class="container"> 
+    	<div class="hearder"></div>
+        <div class="body">
+        	<div class="bodyLeft">
+            	<ul>
+                	<li class="curPage">
+                    	<a href="../index.html">
+                            <img src="../images/icon/homepage.png" />
+                            <p>购彩大厅</p>
+                        </a>
+                    </li>
+                    <li class="">
+                    	<a href="togethoer.html">
+                            <img src="../images/icon/groupBuy.png" />
+                            <p>合买大厅</p>
+                        </a>
+                    </li>
+                    <li class="">
+                    	<a href="lottery/lottery.html">
+                            <img src="../images/icon/notice.png" />
+                            <p>开奖公告</p>
+                        </a>
+                    </li>
+                    <li class="">
+                    	<a href="recharge/index.html">
+                            <img src="../images/icon/payIcon.png" />
+                            <p>充值中心</p>
+                        </a>
+                    </li>
+                    <li class="">
+                    	<a href="userCenter/index.html">
+                            <img src="../images/icon/userCenter.png" />
+                            <p>用户中心</p>
+                        </a>
+                    </li>
+                    <li class="">
+                    	<a href="more/index.html">
+                            <img src="../images/icon/more.png" />
+                            <p>更多</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        	<div class="bodyRight">
+            	<div class="homeTitle">
+                    <div class="logBox">
+                    	<a id="logBtn" class="logBtn" href="#">登陆</a>
+                    </div>
+                    <div class="title">
+                    	<div id="choseBet">
+                            	<img class="triangle_bettop" src="../images/icon/triangle_bettop.png" />
+                            	<ul class="clearfix">
+                                	<li id="bet_zx" class="active">
+                                    	<p>福彩3D-单选</p>
+                                    </li>
+                                    <li id="bet_dt">
+                                    	<p>福彩3D-组3</p>
+                                    </li>
+                                    <li id="bet_dt">
+                                    	<p>福彩3D-组6</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                    	<div id="betTit" class="bettingTit">
+                        	时时彩-大小单双
+                        </div>
+                    </div>
+                </div>
+                <div class="homeCont">
+                	<div class="appBox">
+                    	<div class="betInfo">
+                        	<a href="../index.html"><img src="../images/icon/backBtn.png" class="fl" /></a>
+                            <div class="fl betInfoText">
+                            	<img src="../images/icon/cirDdd.png" class="fl" />
+                                <div class="fl topSpace">
+                                    <p>当前第<span id="batchCode"></span>期&nbsp;&nbsp;每晚开奖，玩法简单，2元赢取1000元！</p>
+                                    <p>截止日期：<span id="endTime"></span>&nbsp;剩余投注时间：<span id="backTime"></span></p>
+                                </div>
+                            </div>
+                            <img id="isLottery" class="fr" src="../images/icon/curLottery.png" />
+                        </div>
+                        <div class="appList betting">
+                        	<div class="betRight">
+                            	<div class="betTitle">
+                                	<ul>
+                                    	<li>号码栏</li>
+                                    </ul>
+                                </div>
+                                <div class="listTopNum">
+                                    <div class="betBox sscMinHei">
+                                        <div class="betlsitBox">
+                                            <div class="betLsTit">
+                                                <span>号码篮</span>
+                                                <img class="fr" src="../images/background/turnUp.png" />
+                                            </div>
+                                            <div class="heigBox">
+                                                <ul class="betList" id="betList">
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="clear h8"></div>
+                                    </div>
+                                    <div class="listMidNum">
+                                        <ul>
+                                            <li id="multBox">
+                                            	<span class="multLeft">倍数</span>
+                                                <span class="multMidd"><input id="lotmulti" type="text" value="1" /></span>
+                                                <span class="multRight"><span class="fl">倍</span><img src="../images/icon/triangle.png" /></span>
+                                            </li>
+                                            <li id="showChase">
+                                            	<span class="multLeft">追期</span>
+                                                <span id="curChase" class="multMidd">1</span>
+                                                <span class="multRight"><span class="fl">期</span><img src="../images/icon/triangle.png" /></span>
+                                            </li>
+                                            <li id="payNum">共0注，0元</li>
+                                        </ul>
+                                    </div>
+                            	</div>
+                                <div class="clear"></div>
+                                <div class="toForPay">
+                                	 <a id="payBtn" class="addToList" href="javascript:;">
+                                    	<p>立即购买</p>
+                                    </a>
+                                </div>
+                            </div>
+                        	<div class="betLeft">
+                            	<div class="betBall">
+                                	<div class="betTitle">
+                                    	<div id="betitText" class="betitText">每行至少选择1个号码</div>
+                                        <div id="show_Dm" class="isDtBet">
+                                            <p id="chose_dm" class="active">胆码</p>
+                                            <p id="chose_tm">拖码</p>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="randomBox qlcHeight" id="redBall">
+                                    	<div class="sscBet" id="ten">
+                                            <span>十位：</span>
+                                            <a href="javascript:">大</a>                 
+                                            <a href="javascript:">小</a> 
+                                            <a href="javascript:">单</a>
+                                            <a href="javascript:">双</a>
+                                            </div>
+                                        <div class="sscBet" id="bit">
+                                            <span>个位：</span>
+                                            <a href="javascript:">大</a>                 
+                                            <a href="javascript:">小</a> 
+                                            <a href="javascript:">单</a>
+                                            <a href="javascript:">双</a>
+                                        
+                                        </div>
+                                        <div class="clear" style="height:5px;"></div>
+                                    </div>
+                                </div>
+                                <div class="betBall">
+                                </div>
+                                <div id="bettingInfo" class="bettingInfo">
+                                	您当前选中了0注，共0元
+                                </div>
+                                <div class="betCtleft">
+                                	<a class="restChose" id="restChose" href="javascript:">
+                                    	<img src="../images/btn/reset.png" />
+                                    </a>
+                                    <a id="addToList" class="addToList fl" href="javascript:">
+                                    	<p>添加到号码蓝</p>
+                                    </a>
+                                </div>
+                                
+                            </div>                     
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <div class="clear"></div>
+        <div class="footer"></div>
+        <div class="clear"></div>
+    </div>
+
+<!--隐藏部分-->
+<div class="dialog" id="dialog">
+	<div id="overlayId" class="overlayId"></div>
+    <div class="dialogBox" id="dialogBox">
+    	
+    </div>
+</div>
+
+
+    <script type = "text/javascript" src="../script/getData.js"></script>
+	<script type = "text/javascript" src="../script/util/util.js"></script>
+	<script type = "text/javascript" src="../script/root.js"></script>
+	<script type = "text/javascript" src="../script/services/login.js"></script>
+    <script type = "text/javascript" src="../script/pickAlgorithm.js"></script>
+    <script type = "text/javascript" src="../script/services/sscServices.js"></script>
+    
+</body>
+</html>

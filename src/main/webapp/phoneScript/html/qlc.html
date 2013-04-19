@@ -1,0 +1,257 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<link type="text/css" rel="stylesheet" href="../style/public.css" />
+<script type="text/javascript">
+	function closeDialog(){
+		util.dom("dialog").style.display = "none";
+	}
+</script>
+</head>
+<body>
+	<div class="container"> 
+    	<div class="hearder"></div>
+        <div class="body">
+        	<div class="bodyLeft">
+            	<ul>
+                	<li class="curPage">
+                    	<a href="../index.html">
+                            <img src="../images/icon/homepage.png" />
+                            <p>购彩大厅</p>
+                        </a>
+                    </li>
+                    <li class="">
+                    	<a href="togethoer.html">
+                            <img src="../images/icon/groupBuy.png" />
+                            <p>合买大厅</p>
+                        </a>
+                    </li>
+                    <li class="">
+                    	<a href="lottery/lottery.html">
+                            <img src="../images/icon/notice.png" />
+                            <p>开奖公告</p>
+                        </a>
+                    </li>
+                    <li class="">
+                    	<a href="recharge/index.html">
+                            <img src="../images/icon/payIcon.png" />
+                            <p>充值中心</p>
+                        </a>
+                    </li>
+                    <li class="">
+                    	<a href="userCenter/index.html">
+                            <img src="../images/icon/userCenter.png" />
+                            <p>用户中心</p>
+                        </a>
+                    </li>
+                    <li class="">
+                    	<a href="more/index.html">
+                            <img src="../images/icon/more.png" />
+                            <p>更多</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        	<div class="bodyRight">
+            	<div class="homeTitle">
+                    <div class="logBox">
+                    	<a id="logBtn" class="logBtn" href="#">登陆</a>
+                    </div>
+                    <div class="title">
+                    	<div id="choseBet">
+                            	<img class="triangle_bettop" src="../images/icon/triangle_bettop.png" />
+                            	<ul class="clearfix">
+                                	<li id="bet_zx" class="active">
+                                    	<p>七乐彩-直选</p>
+                                    </li>
+                                    <li id="bet_dt">
+                                    	<p>七乐彩-胆拖</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                    	<div id="betTit" class="bettingTit">
+                        	七乐彩-直选
+                        </div>
+                    </div>
+                </div>
+                <div class="homeCont">
+                	<div class="appBox">
+                    	<div class="betInfo">
+                        	<img src="../images/icon/backBtn.png" class="fl" />
+                            <div class="fl betInfoText">
+                            	<img src="../images/icon/cirqlc.png" class="fl" />
+                                <div class="fl topSpace">
+                                    <p>当前第<span id="batchCode"></span>期&nbsp;&nbsp;每周一、三、五开奖,2元赢取500万!</p>
+                                    <p>截止日期：<span id="endTime"></span>&nbsp;</p>
+                                </div>
+                            </div>
+                            <img id="isLottery" class="fr" src="../images/icon/curLottery.png" />
+                        </div>
+                        <div class="appList betting">
+                        	<div class="betRight">
+                            	<div class="betTitle">
+                                	<ul>
+                                    	<li>号码栏</li>
+                                    </ul>
+                                </div>
+                                <div class="listTopNum">
+                                    <div class="betBox betMinHei">
+                                        <div class="betlsitBox">
+                                            <div class="betLsTit">
+                                                <span>号码篮</span>
+                                                <img class="fr" src="../images/background/turnUp.png" />
+                                            </div>
+                                            <div class="heigBox">
+                                                <ul class="betList" id="betList">
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="clear h8"></div>
+                                    </div>
+                                    <div class="listMidNum">
+                                        <ul>
+                                            <li id="multBox">
+                                            	<span class="multLeft">倍数</span>
+                                                <span class="multMidd"><input id="lotmulti" type="text" value="1" /></span>
+                                                <span class="multRight"><span class="fl">倍</span><img src="../images/icon/triangle.png" /></span>
+                                            </li>
+                                            <li id="showChase">
+                                            	<span class="multLeft">追期</span>
+                                                <span id="curChase" class="multMidd">1</span>
+                                                <span class="multRight"><span class="fl">期</span><img src="../images/icon/triangle.png" /></span>
+                                            </li>
+                                             <li id="startcase">
+                                            	<span class="multLeft">合买</span>
+                                                <span class="multMidd">&nbsp;</span>
+                                                <span class="multRight"><span class="fl">&nbsp;&nbsp;</span><img src="../images/icon/triangle.png" /></span>
+                                            </li>
+                                             
+                                             <li>
+                                            	<span class="multLeft">赠送</span>
+                                                <span class="multMidd">&nbsp;</span>
+                                                <span class="multRight"><span class="fl">&nbsp;&nbsp;</span><img src="../images/icon/triangle.png" /></span>
+                                            </li>
+                                            <li id="payNum">共0注，0元</li>
+                                        </ul>
+                                    </div>
+                            	</div>
+                                <div class="clear"></div>
+                                <div class="toForPay">
+                                	 <a id="payBtn" class="addToList" href="javascript:;">
+                                    	<p>立即购买</p>
+                                    </a>
+                                </div>
+                            </div>
+                        	<div class="betLeft">
+                            	<div class="betBall">
+                                	<div class="betTitle">
+                                    	<div id="betitText" class="betitText">前区至少选择5个号码</div>
+                                        <div id="show_Dm" class="isDtBet">
+                                            <p id="chose_dm" class="active">胆码</p>
+                                            <p id="chose_tm">拖码</p>
+                                        </div>
+                                        <div id="randRed" class="randomCtrl">
+                                        	<div class="randCtrlBox">
+                                            	<div id="randNum" class="randNum">
+                                                	7个
+                                                </div>
+                                                <div class="setRandom">
+                                                	机选红球
+                                                </div>
+                                                <div class="choseNum" id="redRandom">
+                                                	<img class="triangle_top" src="../images/icon/triangle_top.png" />
+                                                	<div class="random">
+                                                        <p>7</p>
+                                                        <p>8</p>
+                                                        <p>9</p>
+                                                        <p>10</p>
+                                                        <p>11</p>
+                                                        <p>12</p>
+                                                        <p>13</p>
+                                                        <p>14</p>
+                                                        <p>15</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="randomBox qlcHeight" id="redBall">
+                                    	<a href="javascript:">01</a>                 
+                                        <a href="javascript:">02</a> 
+                                        <a href="javascript:">03</a>
+                                        <a href="javascript:">04</a>
+                                        <a href="javascript:">05</a>
+                                        <a href="javascript:">06</a>
+                                        <a href="javascript:">07</a>
+                                        <a href="javascript:">08</a>
+                                        <a href="javascript:">09</a>
+                                        <a href="javascript:">10</a>
+                                        <a href="javascript:">11</a>
+                                        <a href="javascript:">12</a>
+                                        <a href="javascript:">13</a>
+                                        <a href="javascript:">14</a>
+                                        <a href="javascript:">15</a>
+                                        <a href="javascript:">16</a>
+                                        <a href="javascript:">17</a>
+                                        <a href="javascript:">18</a>
+                                        <a href="javascript:">19</a>
+                                        <a href="javascript:">20</a>
+                                        <a href="javascript:">21</a>
+                                        <a href="javascript:">22</a>
+                                        <a href="javascript:">23</a>
+                                        <a href="javascript:">24</a>
+                                        <a href="javascript:">25</a>
+                                        <a href="javascript:">26</a>
+                                        <a href="javascript:">27</a>
+                                        <a href="javascript:">28</a>
+                                        <a href="javascript:">29</a>
+                                        <a href="javascript:">30</a>
+                                        <div class="clear" style="height:5px;"></div>
+                                    </div>
+                                </div>
+                                <div class="betBall">
+                                </div>
+                                <div id="bettingInfo" class="bettingInfo">
+                                	您当前选中了0注，共0元
+                                </div>
+                                <div class="betCtleft">
+                                	<a class="restChose" id="restChose" href="javascript:">
+                                    	<img src="../images/btn/reset.png" />
+                                    </a>
+                                    <a id="addToList" class="addToList fl" href="javascript:">
+                                    	<p>添加到号码蓝</p>
+                                    </a>
+                                </div>
+                                
+                            </div>                     
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <div class="clear"></div>
+        <div class="footer"></div>
+        <div class="clear"></div>
+    </div>
+
+<!--隐藏部分-->
+<div class="dialog" id="dialog">
+	<div id="overlayId" class="overlayId"></div>
+    <div class="dialogBox" id="dialogBox">
+    	
+    </div>
+</div>
+
+
+    <script type = "text/javascript" src="../script/getData.js"></script>
+	<script type = "text/javascript" src="../script/util/util.js"></script>
+	<script type = "text/javascript" src="../script/root.js"></script>
+	<script type = "text/javascript" src="../script/services/login.js"></script>
+    <script type = "text/javascript" src="../script/pickAlgorithm.js"></script>
+    <script type = "text/javascript" src="../script/services/qlcServices.js"></script>
+    
+</body>
+</html>

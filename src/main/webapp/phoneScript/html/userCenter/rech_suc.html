@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<link type="text/css" rel="stylesheet" href="../../style/public.css" />
+<script type="text/javascript">
+	function closeDialog(){
+		util.dom("dialog").style.display = "none";
+	}
+	window.onload = function(){
+		var message = sessionStorage.getItem("result");
+		document.getElementById("message").innerHTML = message;
+	}
+</script>
+</head>
+<body>
+	<div class="container">
+    	<div class="hearder"></div>
+        <div class="body">
+        	<div class="bodyLeft">
+            	<ul>
+                	<li class="">
+                    	<a href="../../index.html">
+                            <img src="../../images/icon/homepage.png" />
+                            <p>购彩大厅</p>
+                        </a>
+                    </li>
+                    <li class="">
+                    	<a href="../togethoer.html">
+                            <img src="../../images/icon/groupBuy.png" />
+                            <p>合买大厅</p>
+                        </a>
+                    </li>
+                    <li class="">
+                    	<a href="../lottery/lottery.html">
+                            <img src="../../images/icon/notice.png" />
+                            <p>开奖公告</p>
+                        </a>
+                    </li>
+                    <li class="">
+                    	<a href="../recharge/index.html">
+                            <img src="../../images/icon/payIcon.png" />
+                            <p>充值中心</p>
+                        </a>
+                    </li>
+                    <li class="curPage">
+                    	<a href="../userCenter/index.html">
+                            <img src="../../images/icon/userCenter.png" />
+                            <p>用户中心</p>
+                        </a>
+                    </li>
+                    <li class="">
+                    	<a href="../more/index.html">
+                            <img src="../../images/icon/more.png" />
+                            <p>更多</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        	<div class="bodyRight">
+            	<div class="homeTitle">
+                    <div class="logBox">
+                    	<a id="logBtn" class="logBtn" href="javascript:;">登陆</a>
+                    </div>
+                    <div class="title">
+                    	提现
+                    </div>
+                </div>
+                <div class="homeCont">
+                	<div class="appBox uc" style="position:relative;">
+                    	
+                        <div class="zx_top">
+                        	<a href="recharge.html"><img src="../../images/icon/backBtn.png" /></a>
+                            <ul id="zxType">
+                            	<li><a id="toBank" href="recharge.html?bank">到银行卡</a></li>
+                                <li><a id="toZfb" href="recharge.html?zfb">到支付宝</a></li>
+                                <li><a href="inq_chas.html">提现记录</a></li>
+                            </ul>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="recharge">
+                        	<div class="rechargeRigh">
+                            	<div class="title">提现注意事项：</div>
+                            	<p>1、单笔提现金额最小为10元；可提现金额小于10元时，申请提现需一次提清。</p>
+                                <p>2、只能提现到银行卡，暂不支持信用卡提现。</p>
+                                <p>
+                                	3、为了防止少数用户利用信用卡套现和洗钱行为，保证正常用户的资金安全，本站针对提款做出以下规定：
+                                	累计充值资金消费未满30%，可提现金额为累计充值资金的70%；累计充值资金消费达到30%，不受此限制。
+                                </p>
+                                <p>
+                                	4、提款到账时间：适用中国工商银行、中国农业银行、中国建设银行、中国招商银行的银行卡进行提现，
+                                    16：00后的提款申请，第二天到账；使用其他银行16：00前的提款申请，第二天到账，16:00后提款申请，
+                                    第三天到账。
+                                </p>
+                                <p>
+                                	5、单笔提现金额最高位50000元。
+                                </p>
+                            </div>
+                        	<div class="rechargeLeft">
+                                <div class="toPay">
+                                	<div class="result">
+                                    	<p class="suc" id="message">您的申请已经提交！</p>
+                                        <div class="resSub">
+                                            <div class="subBtm fl">
+                                                <a href="rech_list.html">查看提现记录注</a>
+                                            </div>
+                                            <div id="reBet" class="subBtm fr">
+                                                <a href="recharge.html">继续提现</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+        </div> <div class="clear"></div>
+        <div class="footer"></div>
+        <div class="clear"></div>
+    </div>
+
+<!--隐藏部分-->
+<div class="dialog" id="dialog">
+	<div id="overlayId" class="overlayId"></div>
+    <div class="dialogBox" id="dialogBox">
+    	
+    </div>
+</div>
+
+	<script type = "text/javascript" src="../../script/getData.js"></script>
+	<script type = "text/javascript" src="../../script/util/util.js"></script>
+	<script type = "text/javascript" src="../../script/root.js"></script>
+    <script type = "text/javascript" src="../../script/services/login.js"></script>
+</body>
+</html>

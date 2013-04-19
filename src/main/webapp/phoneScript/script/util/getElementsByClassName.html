@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>util - getElementByClassName</title>
+<script type="text/javascript">
+var getElementsByClassName = function (searchClass, node,tag) {
+	node = node || document;
+	tag = tag || "*";
+	var classes = searchClass.split(" "),
+	elements = node.getElementsByTagName(tag),
+	patterns = [],
+	returnElements = [],
+	current,
+	match;
+	var i = classes.length;
+	while(--i >= 0){
+		patterns.push(new RegExp("(^|\\s)" + classes[i] + "(\\s|$)"));
+	}
+	var j = elements.length;
+	while(--j >= 0){
+		current = elements[j];
+		match = false;
+		for(var k=0, kl=patterns.length; k<kl; k++){
+			match = patterns[k].test(current.className);
+			if (!match)  break;
+		}
+		if (match)  returnElements.push(current);
+	}
+	return returnElements;
+}
+window.onload = function(){
+	var $parentNode = document.getElementById("parentNode");
+	var testArr = document.getElementsByClassName("testClass");
+	var testArr2 = document.getElementsByClassName("testClass abc");
+	var testArr3 = $parentNode.getElementsByClassName("testClass");
+	var testArr4 = getElementsByClassName("testClass",$parentNode,"div");
+	alert(testArr4.length);
+}
+</script>
+</head>
+
+<body>
+<div class="testClass" id="parentNode">
+	<div class="testClass"></div>
+    <div class="testClass"></div>
+    <div class="testClass"></div>
+    <div class="testClass abc"></div>
+    <div class="testClass"></div>
+    <div class="testClass"></div>
+    <span class="testClass"></span>
+    <span class="testClass abc"></span>
+    <span class="testClass"></span>
+    <span class="testClass"></span>
+</div>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<link type="text/css" rel="stylesheet" href="../../style/public.css" />
+<script type="text/javascript">
+	function closeDialog(){
+		util.dom("dialog").style.display = "none";
+	}
+</script>
+</head>
+<body>
+	<div class="container">
+    	<div class="hearder"></div>
+        <div class="body">
+        	<div class="bodyLeft">
+            	<ul>
+                	<li class="">
+                    	<a href="../../index.html">
+                            <img src="../../images/icon/homepage.png" />
+                            <p>购彩大厅</p>
+                        </a>
+                    </li>
+                    <li class="">
+                    	<a href="../togethoer.html">
+                            <img src="../../images/icon/groupBuy.png" />
+                            <p>合买大厅</p>
+                        </a>
+                    </li>
+                    <li class="">
+                    	<a href="../lottery/lottery.html">
+                            <img src="../../images/icon/notice.png" />
+                            <p>开奖公告</p>
+                        </a>
+                    </li>
+                    <li class="">
+                    	<a href="../recharge/index.html">
+                            <img src="../../images/icon/payIcon.png" />
+                            <p>充值中心</p>
+                        </a>
+                    </li>
+                    <li class="curPage">
+                    	<a href="../userCenter/index.html">
+                            <img src="../../images/icon/userCenter.png" />
+                            <p>用户中心</p>
+                        </a>
+                    </li>
+                    <li class="">
+                    	<a href="../more/index.html">
+                            <img src="../../images/icon/more.png" />
+                            <p>更多</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        	<div class="bodyRight">
+            	<div class="homeTitle">
+                    <div class="logBox">
+                    	<a id="logBtn" class="logBtn" href="javascript:;">登陆</a>
+                    </div>
+                    <div class="title">
+                    	中奖查询
+                    </div>
+                </div>
+                <div class="homeCont">
+                	<div class="appBox uc">
+                    	
+                        <div class="zx_top">
+                        	<a href="index.html"><img src="../../images/icon/backBtn.png" /></a>
+                            <ul id="zxType">
+                            	<li><a href="inquiry.html">中奖查询</a></li>
+                                <li><a href="inq_bet.html">投注查询</a></li>
+                                <li><a class="active" href="javascript:">追号查询</a></li>
+                                <li><a href="inq_tog.html">合买查询</a></li>
+                                <li><a href="inq_gift.html">赠送查询</a></li>
+                            </ul>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="inquiry">
+                        	<ul id="inquiry" class="inq_chas">
+                            </ul>
+                            <div class="inq_more grey" id="more">更多</div>
+                            <div id="inq_info" class="intBetInfo">
+                            	
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+        </div> <div class="clear"></div>
+        <div class="footer"></div>
+        <div class="clear"></div>
+    </div>
+
+<!--隐藏部分-->
+<div class="dialog" id="dialog">
+	<div id="overlayId" class="overlayId"></div>
+    <div class="dialogBox" id="dialogBox">
+    	
+    </div>
+</div>
+
+	<script type = "text/javascript" src="../../script/getData.js"></script>
+	<script type = "text/javascript" src="../../script/util/util.js"></script>
+	<script type = "text/javascript" src="../../script/root.js"></script>
+    <script type = "text/javascript" src="../../script/services/login.js"></script>
+    <script type = "text/javascript" src="../../script/manger/inq_chas.js"></script>
+</body>
+</html>

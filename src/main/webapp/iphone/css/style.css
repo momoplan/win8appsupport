@@ -1,0 +1,53 @@
+/*合买大厅*/
+.togInfo_top{
+	padding:10px;
+	font-size:13px;
+}
+.togInfo_top ul{
+	border-radius:5px;
+	border: 1px solid #aaa;
+	border-bottom:0;
+	overflow:hidden;
+}
+.togInfo_top li{
+	padding:5px;
+	border-bottom: 1px solid #AAA;
+}
+.togInfo_top li input{
+	width:60px;
+	height:18px;
+	margin:0 8px;
+	border-radius: 5px;
+}
+.red{color:#F00;}
+
+.togInfo_bottom{
+	padding:10px;
+}
+.togInfo_bottom dt,dd{
+	font-size:13px;
+	min-height:40px;
+	line-height: 40px;
+} 
+.togInfo_bottom dd{
+	border-top: 1px solid #AAA;
+}
+.togInfo_bottom dl{
+	border-radius:5px;
+	border:1px solid #AAA;
+}
+.togInfo_bottom dd span{
+	color:#396a9c;
+	display:block;
+	width:30%;
+	float: left;
+	text-indent:2em;
+}
+.togInfo_bottom dd p{
+	width:70%;
+	float:left;
+}
+.togInfo_bottom dt{
+	text-indent:1.2em;
+	font-weight:bold;
+}
